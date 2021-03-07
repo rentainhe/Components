@@ -144,7 +144,7 @@ class GroupLinear(nn.Module):
 
 if __name__ == '__main__':
     test_data = torch.randn(1,16,256)
-    GL = GroupLinear(256,512,use_shuffle=True)
+    GL = GroupLinear(256,512,use_shuffle=True,n_groups=4)
     print(GL)
     print(GL.compute_macs_params())
     print(GL(test_data).size())
